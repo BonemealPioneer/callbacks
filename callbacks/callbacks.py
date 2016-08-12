@@ -129,7 +129,7 @@ This %s supports callbacks.
         '''
             List all of the callbacks registered to this function or method.
         '''
-        print self._callbacks_info
+        print (self._callbacks_info)
 
     def add_post_callback(self, callback,
             priority=0,
@@ -300,7 +300,7 @@ This %s supports callbacks.
             self._initialize()
 
     def __call__(self, *args, **kwargs):
-        print 'self', self, self.target
+        #print 'self', self, self.target
         if self._target_is_method:
             cb_args = args[1:] # skip over 'self' arg
         else:
